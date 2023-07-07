@@ -1,0 +1,1 @@
+pytest --cov=business_modeler --cov-report html

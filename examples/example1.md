@@ -1,0 +1,15 @@
+## What problem are you trying to solve?
+
+The problem that this idea is trying to address is the inconvenience and time constraints faced by individuals who want to enjoy freshly brewed coffee and pastries without having to physically visit a coffee shop. In today’s fast-paced world, people often find it difficult to spare the time to go to a coffee shop, especially during peak hours when queues are long, or when they are caught up with work or other engagements. Additionally, traditional delivery methods may not always guarantee the freshness and optimal temperature of the coffee and pastries by the time they reach the customer.
+
+## What’s your idea/solution to solve this problem? 
+
+The proposed solution to this problem is to establish a coffee shop that utilizes drone technology for delivering freshly brewed coffee and pastries to customers in nearby areas. The coffee shop would take orders through an app or a website where customers can choose their preferred coffee and pastries. The order would then be prepared and loaded onto a drone. The drone, equipped with GPS and possibly some kind of thermal insulation system to maintain the temperature of the products, would then fly to the customer’s location and make the delivery in a timely manner. This approach would drastically reduce delivery times compared to conventional methods, ensuring that the coffee and pastries remain fresh and hot.
+
+## Who has this problem? 
+
+This problem is faced by a wide range of individuals, including but not limited to, working professionals, students, and home-makers. For instance, working professionals might be caught up in back-to-back meetings and unable to step out for a coffee break. Similarly, students, especially during exam season, may prefer to have coffee delivered to them so that they can make the most of their time. Also, individuals who might be taking care of their family, elderly, or sick people at home might find it inconvenient to leave the house just for a cup of coffee or a snack.
+
+# Why do you think this is a problem worth solving?
+
+This is a problem worth solving because it addresses a need for convenience and efficiency in the modern world. As society continues to evolve, people’s lives are becoming increasingly busy and their time more valuable. By providing a solution that allows them to enjoy freshly brewed coffee and pastries without having to disrupt their schedule or compromise on quality, it not only enhances their daily experience but also can contribute to their productivity and well-being. Furthermore, from a business perspective, solving this problem opens up a new market segment and delivery model, which can be an innovative and profitable venture. It also has the potential to reduce the environmental footprint by using electric drones as opposed to traditional delivery vehicles.

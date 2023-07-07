@@ -1,0 +1,12 @@
+# Original Idea
+{seed}
+
+{canvas}
+
+{assumptions}
+
+{risks}
+
+{experiments}
+
+{alternatives}

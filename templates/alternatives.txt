@@ -1,0 +1,15 @@
+Your job is to identify some alternative business models using the original idea and the business model canvas.
+
+THe original idea: {seed}
+
+The business model: {canvas}
+
+List 10 alternative business models. For each idea:
+
+1. Describe the alternative business model.
+2. Explain why you think they are better than the original idea.
+3. State the problem that the alternative business model solves.
+4. State the solution that the alternative business model provides.
+5. State the benefits of the solution.
+
+Format the results using markdown. The title of this section should be "Alternative Business Models"

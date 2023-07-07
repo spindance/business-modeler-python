@@ -1,0 +1,34 @@
+# The default model.
+# Generating a business model with this model will 
+# cost around $0.02 or $0.03, and take between 30 and 90 seconds
+model_name: "gpt-3.5-turbo-16k"
+
+# Other models to try are below:
+
+# GPT-4 is more advanced, but slower and more costly. 
+# As of 7/6/2023, each run will cost around $0.30 and take
+# 4 to 6 minutes to run.
+#model_name: "gpt-4"
+
+# GPT-4-32k handles more content than the "gpt-4" model. 
+# You likely won't need to use this unless you run into 
+# size limitations with the standard gpt-4 model
+#model_name: "gpt-4-32k"
+
+# Controls the creativity of the chatbot. 
+# This controls the level of creativity of the chatbot. 
+# 0.7 is a good default.
+temperature: 0.7
+
+# The templates to use in the chain. 
+# The output of one template is used as the inputs to one
+# or more downline chain. Therefore, removing or reordering
+# these files with modifying them will break the system.
+chains:
+  - template_file: "canvas.txt"
+  - template_file: "assumptions.txt"
+  - template_file: "risks.txt"
+  - template_file: "experiments.txt"
+  - template_file: "alternatives.txt"
+
+

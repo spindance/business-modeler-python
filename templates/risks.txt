@@ -1,0 +1,9 @@
+Your job is to rank the assumptions in each of the 9 elements of the Lean Business Model Canvas by risk. 
+
+Group the risks by User Desirability, Business Viability, and Technical Feasibility.
+
+List top 10 risks per group.
+
+Format the results using markdown. The title of this section should be "Risks".
+
+Use these assumptions: {assumptions}

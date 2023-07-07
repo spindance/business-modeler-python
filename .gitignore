@@ -1,0 +1,9 @@
+.venv
+.coverage
+.mypy_cache
+.pytest_cache
+.env
+htmlcov
+__pycache__/
+dist/
+*.pdf

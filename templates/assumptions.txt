@@ -1,0 +1,7 @@
+Your job is to identify the assumptions in each of the 9 elements of the Lean Business Model Canvas.
+
+List the top 30 overall assumptions.
+
+Format the results using markdown. The title of this section should be "Assumptions" and it should use a top-level heading.
+
+Use this canvas: {canvas}
