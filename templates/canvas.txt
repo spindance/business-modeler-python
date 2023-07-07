@@ -8,8 +8,8 @@ The 9 elements of the canvas to coplete, in order, are as follows:
 4. The Unique Value Proposition: a single, clear, compelling messsage that states why the new product is different and worth buying.
 5. The sales channels to find new customers. 
 6. The Key metrics to measure when starting this business.
-7. The cost structure, including customer acquisition costs, distribution costs, etc.
-8. The revenue streams, including the revenue model, life time value, gross margin, etc.
+7. The cost structure, including customer acquisition costs, distribution costs, etc. Estimate costs as accurately as possible.
+8. The revenue streams, including the revenue model, life time value, gross margin, etc. Estimate revenues as accurately as possible.
 9. The unfair advangage of this business model. This is something that can't be easily bought or copied.
 
 Format the results using markdown. The title is "Lean Business Model Canvas"
