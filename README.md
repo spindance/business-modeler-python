@@ -98,6 +98,19 @@ Example usage:
 python business_modeler.py --seed-file examples/example1.md --output-file my_report --markdown
 ```
 
+```sh
+Using seed file: examples/example3.md
+Running chain 'canvas'
+Running chain 'assumptions'
+Running chain 'risks'
+Running chain 'experiments'
+Running chain 'alternatives'
+PDF file created: smart-plants.pdf
+Total tokens: 7283
+Total cost: $0.03
+Runtime: 63.44 seconds
+```
+
 This will generate a business model based on the seed file `examples/example1.md`, and save it as `my_report.pdf` and `my_report.md`.
 
 ## Customization
@@ -113,7 +126,7 @@ Contributions to Business Modeler are very welcome! Here's how you can help:
 1. **Fork and Clone**: Start by forking the repository and then clone your fork locally.
 
    ```sh
-   git clone https://github.com/<your_username>/business-modeler.git
+   git clone https://github.com/spindance/business-modeler.git
    cd business-modeler
    ```
 
