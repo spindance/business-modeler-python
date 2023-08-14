@@ -7,3 +7,6 @@ htmlcov
 __pycache__/
 dist/
 *.pdf
+.DS_Store
+spindance_ideas/*
+chatgpt-created-ideas/*
