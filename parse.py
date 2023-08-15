@@ -6,7 +6,7 @@ description_pattern = re.compile(
     re.DOTALL,
 )
 output_pattern = re.compile(r"output:\s*(?P<output>[^\r\n]+)")
-file_pattern = re.compile(r"file:\s*(?P<filename>[^\r\n]+).pdf")
+file_pattern = re.compile(r"file_suffix:\s*(?P<filename>[^\r\n]+)")
 
 
 def parse_template(text: str) -> tuple:

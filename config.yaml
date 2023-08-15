@@ -19,15 +19,5 @@ model_name: "gpt-3.5-turbo-16k"
 # 0.7 is a good default.
 temperature: 0.7
 
-# The templates to use in the chain. 
-# The output of one template is used as the inputs to one
-# or more downline chains. Therefore, removing or reordering
-# these files with modifying them will break the system.
-chains:
-  - template_file: "canvas.txt"
-  - template_file: "assumptions.txt"
-  - template_file: "risks.txt"
-  - template_file: "experiments.txt"
-  - template_file: "alternatives.txt"
 
 

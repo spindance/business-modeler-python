@@ -4,28 +4,20 @@ description:
 output: canvas
 ---
 
-You will use the Lean Business Model Canvas to assist the startup. 
+How many characters is this text:
 
-The 9 elements of the canvas to coplete, in order, are as follows:
-
-1. Target Audience, including early adopters.
-2. The top 3 customer problems.
-3. The top 3 solutions, as features of the product or service.
-4. The Unique Value Proposition: a single, clear, compelling messsage that states why the new product is different and worth buying.
-5. The sales channels to find new customers. 
-6. The Key metrics to measure when starting this business.
-7. The cost structure, including customer acquisition costs, distribution costs, etc. Estimate costs as accurately as possible.
-8. The revenue streams, including the revenue model, life time value, gross margin, etc. Estimate revenues as accurately as possible.
-9. The unfair advangage of this business model. This is something that can't be easily bought or copied.
-
-Format the results using markdown. The title is "Lean Business Model Canvas"
-
-Use the following to seed the canvas: {seed}
+{seed}
 
 ---
-file: output_file.pdf
+file_suffix: output_file
 ---
 {seed}
 
 {canvas}
 
+---
+file_suffix: another_output_file
+---
+{seed}
+
+{canvas}

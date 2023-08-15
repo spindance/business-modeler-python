@@ -2,7 +2,21 @@ from datetime import datetime
 
 from md2pdf.core import md2pdf
 
-# from utils import read_template
+
+def generate_reports(report_files, markdown_flag, **chain_output_dict):
+    markdown_file_names = []
+    pdf_file_names = []
+    for report_file in report_files:
+        markdown_file_name, pdf_file_name = generate_report(
+            report_file["file"],
+            report_file["template"],
+            markdown_flag,
+            **chain_output_dict,
+        )
+
+        markdown_file_names.append(markdown_file_name)
+        pdf_file_names.append(pdf_file_name)
+    return (markdown_file_names, pdf_file_names)
 
 
 def generate_report(
@@ -11,18 +25,6 @@ def generate_report(
     markdown,
     **chain_output_dict,
 ):
-    """
-    Generates a report by converting chain output to markdown and then to PDF.
-
-    Parameters:
-    - output_file (str): The base name of the output file.
-    - markdown (bool): If True, saves the markdown content to a file.
-    - chain_output_dict (dict): Dictionary containing the output of the chains.
-
-    Returns:
-    - tuple: The names of the created markdown and PDF files.
-    """
-    # output_template = read_template(output_template_file, prompt_template_dir)
     markdown_output = output_template.format(**chain_output_dict)
     file_name = output_file or f"output-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
     markdown_file_name = f"{file_name}.md"
@@ -40,7 +42,7 @@ def generate_report(
     return markdown_file_name, pdf_file_name
 
 
-def report_results(markdown, markdown_file_name, pdf_file_name, cb, duration):
+def report_results(markdown, markdown_file_names, pdf_file_names, cb, duration):
     """
     Packages the results of the report generation into a dictionary.
 
@@ -55,8 +57,8 @@ def report_results(markdown, markdown_file_name, pdf_file_name, cb, duration):
     - dict: A dictionary containing the results.
     """
     return {
-        "markdown_file": markdown_file_name if markdown else None,
-        "pdf_file": pdf_file_name,
+        "markdown_file": markdown_file_names if markdown else None,
+        "pdf_file": pdf_file_names,
         "total_tokens": cb.total_tokens,
         "total_cost": cb.total_cost,
         "runtime": duration,

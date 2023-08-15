@@ -5,6 +5,44 @@ import time
 
 import yaml
 
+from parse import parse_template
+
+DEFAULT_TEMPERATURE = 0.7
+DEFAULT_MODEL_NAME = "gpt-3.5-turbo-16k"
+CONFIG_FILE = "config.yaml"
+EXAMPLE_INPUT_FILE = "input_example.md"
+
+
+def load_chain_file(chain_filename):
+    # Parse the prompts templates
+    with open(chain_filename, "r") as f:
+        chain = f.read()
+    return parse_template(chain)
+
+
+def load_configuration(config_file, commandline_options):
+    try:
+        with open(config_file, "r") as file:
+            raw_config_file = yaml.safe_load(file)
+    except Exception as e:
+        print(f"Error loading configuration file: {e}")
+        return {}
+
+    configuration = {}
+
+    # Override temperature and model_name if provided
+    configuration["temperature"] = commandline_options[
+        "temperature"
+    ] or raw_config_file.get("temperature", DEFAULT_TEMPERATURE)
+    configuration["model_name"] = commandline_options[
+        "model_name"
+    ] or raw_config_file.get(
+        "model_name",
+        DEFAULT_MODEL_NAME,
+    )
+
+    return configuration
+
 
 def load_chain_config(config_file):
     """
@@ -129,4 +167,5 @@ def read_seed(seed_file, example_input_file, prompt_templates_dir):
 #         "total_tokens": cb.total_tokens,
 #         "total_cost": cb.total_cost,
 #         "runtime": duration,
+#     }
 #     }

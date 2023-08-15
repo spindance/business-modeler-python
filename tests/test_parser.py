@@ -18,7 +18,7 @@ output: single_line
 Another sample template for testing.
 
 ---
-file: test_filename.pdf
+file_suffix: test_filename
 ---
 File related template content.
 """
