@@ -8,5 +8,6 @@ __pycache__/
 dist/
 *.pdf
 .DS_Store
-spindance_ideas/*
-chatgpt-created-ideas/*
+spindance_ideas/
+chatgpt-created-ideas/
+generated_ideas/

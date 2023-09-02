@@ -5,7 +5,7 @@ import time
 
 import yaml
 
-from parse import parse_template
+from chainflow.parse import parse_template
 
 DEFAULT_TEMPERATURE = 0.7
 DEFAULT_MODEL_NAME = "gpt-3.5-turbo-16k"
@@ -120,7 +120,7 @@ def read_template(template_name, prompt_templates_dir):
         return f.read()
 
 
-def read_seed(seed_file, example_input_file, prompt_templates_dir):
+def read_seed(seed_file):
     """
     Reads the content of a seed file or provides an example input if no file is provided.
 
@@ -134,38 +134,31 @@ def read_seed(seed_file, example_input_file, prompt_templates_dir):
     - ValueError: If the provided seed file doesn't exist.
     - FileNotFoundError: If seed file is not found.
     """
-    if seed_file is None:
-        # Assuming `read_template` is a function that reads the EXAMPLE_INPUT_FILE
-        return read_template(example_input_file, prompt_templates_dir)
-    elif not os.path.exists(seed_file):
+    if not os.path.exists(seed_file):
         raise FileNotFoundError(f"Seed file '{seed_file}' not found.")
     else:
         with open(seed_file, "r") as f:
             return f.read()
 
 
-# TODO: Move this to report.py
+def report_results(markdown, markdown_file_names, pdf_file_names, cb, duration):
+    """
+    Packages the results of the report generation into a dictionary.
 
+    Parameters:
+    - markdown (bool): If True, indicates markdown file was created.
+    - markdown_file_name (str): The name of the markdown file.
+    - pdf_file_name (str): The name of the PDF file.
+    - cb (CallbackHandler): The callback handler used during report generation.
+    - duration (float): The total runtime in seconds.
 
-# def report_results(markdown, markdown_file_name, pdf_file_name, cb, duration):
-#     """
-#     Packages the results of the report generation into a dictionary.
-
-#     Parameters:
-#     - markdown (bool): If True, indicates markdown file was created.
-#     - markdown_file_name (str): The name of the markdown file.
-#     - pdf_file_name (str): The name of the PDF file.
-#     - cb (CallbackHandler): The callback handler used during report generation.
-#     - duration (float): The total runtime in seconds.
-
-#     Returns:
-#     - dict: A dictionary containing the results.
-#     """
-#     return {
-#         "markdown_file": markdown_file_name if markdown else None,
-#         "pdf_file": pdf_file_name,
-#         "total_tokens": cb.total_tokens,
-#         "total_cost": cb.total_cost,
-#         "runtime": duration,
-#     }
-#     }
+    Returns:
+    - dict: A dictionary containing the results.
+    """
+    return {
+        "markdown_file": markdown_file_names,
+        "pdf_file": pdf_file_names,
+        "total_tokens": cb.total_tokens,
+        "total_cost": cb.total_cost,
+        "runtime": duration,
+    }

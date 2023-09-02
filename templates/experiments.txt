@@ -1,9 +1,0 @@
-Your job is to review the given risks and asssumptions, and identify business model experiments to derisk the assumptions.
-
-List 10 business model experiments. Explain why you think they will derisk the assumptions.
-
-Format the results using markdown. The title of this section should be "Proposed Experiments."
-
-Use these assumptions: {assumptions}
-
-And these risks: {risks}

@@ -1,6 +1,6 @@
 ---
 description: 
-  Converts the input into a one-page business model canvas..
+  Converts the input into a one-page business model canvas.
 output: canvas
 ---
 
@@ -22,20 +22,6 @@ Format the results using markdown. The title is "Lean Business Model Canvas"
 
 Use the following to seed the canvas: {seed}
 
-
----
-description:
-  A title for the business model canvas.
-output: title
----
-
-Create a title for the business model canvas. 
-
-use this initial seed: {seed} and this canvas {canvas}
-
-Format the the results in markdown.
-
-
 ---
 description:
   Identify assumptions for a given business model.
@@ -44,7 +30,7 @@ output: assumptions
 
 Your job is to identify the assumptions in each of the 9 elements of the Lean Business Model Canvas.
 
-List the top 30 overall assumptions.
+List the top 50 overall assumptions.
 
 Format the results using markdown. The title of this section should be "Assumptions" and it should use a top-level heading.
 
@@ -72,13 +58,37 @@ output: experiments
 
 Your job is to review the given risks and asssumptions, and identify business model experiments to derisk the assumptions.
 
-List 10 business model experiments. Explain why you think they will derisk the assumptions.
+List 20 business model experiments. Explain why you think they will derisk the assumptions.
+
+Group the experiments by the elements of the lean canvas, prioritizing the experiments that derisk the highest risk assumptions.
 
 Format the results using markdown. The title of this section should be "Proposed Experiments."
+
+Business model canvas: {canvas}
 
 Use these assumptions: {assumptions}
 
 And these risks: {risks}
+
+---
+output: interview_questions
+---
+If you identified interviews 
+
+
+If you identified interviews as a risk mitigation approach, formulate 100 possible questions that you would ask in an interview.
+Prioritize and group as needed.
+
+The original idea: {seed}
+
+The identified assumptions:
+{assumptions}
+
+The identified risks:
+{risks}
+
+The identified experiments:
+{experiments}
 
 
 ---
@@ -102,10 +112,8 @@ List 10 alternative business models. For each idea:
 Format the results using markdown. The title of this section should be "Alternative Business Models"
 
 ---
-file: output_file.pdf
+file_suffix: output_file
 ---
-
-# {title}
 
 {seed}
 
@@ -116,5 +124,7 @@ file: output_file.pdf
 {risks}
 
 {experiments}
+
+{interview_questions}
 
 {alternatives}

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "business_modeler"
+name = "chainflow"
 version = "0.1.0"
 description = "Generate business models using AI."
 authors = ["briant-spindance <brian.tol@spindance.com>"]
@@ -15,7 +15,7 @@ click = "^8.1.3"
 md2pdf = "^1.0.1"
 transformers = "^4.30.2"
 types-pyyaml = "^6.0.12.11"
-
+prompt-toolkit = "^3.0.39"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.12.0"
@@ -24,6 +24,9 @@ mypy = "^1.4.1"
 pytest = "^7.4.0"
 coverage = "^7.2.7"
 pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+chainflow = "chainflow.cli:main"
 
 [build-system]
 requires = ["poetry-core"]

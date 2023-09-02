@@ -1,0 +1,49 @@
+---
+description: Step 1 -identify the primary personas 
+output: primary_personas
+---
+Review this project sketch. Identify the primary personas. 
+
+For each persona, list:
+
+1. The problems they are trying to solve.
+2. The outcomes they are trying to achieve.
+3. The gains they are trying to achieve.
+4. The pains they are trying to avoid.
+
+Return markdown.
+
+{seed}
+
+
+---
+description: Step 2 - define the primary use cases for the primary personas
+output: primary_use_cases
+---
+Identify the business and system use cases for the primary personas.
+
+For each use case, include:
+
+1. The name of the use case
+2. The primary persona
+3. A description of the use case
+
+Return markdown.
+
+Primary Personas:
+{primary_personas}
+
+Overview:
+{seed}
+
+
+---
+file_suffix: output
+---
+# Overview
+{seed}
+
+{primary_personas}
+
+{primary_use_cases}
+

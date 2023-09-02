@@ -1,0 +1,21 @@
+---
+description: Create a LinkedIn post
+output: post
+---
+Create an informative LinkedIn post
+
+From the following article: [Insert Article Content Here], please provide:
+
+A brief and concise summary.
+A list of the key concepts and central ideas.
+A structured outline showcasing its main sections and subpoints.
+5-7 relevant tags or keywords reflecting its primary subjects.
+
+Return in markdown format.
+
+{seed}
+
+---
+file_suffix: post
+---
+{post}
