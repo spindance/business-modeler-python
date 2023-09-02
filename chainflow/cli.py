@@ -71,7 +71,7 @@ def run(**kwargs):
 
         prompt_list, report_files, errors = load_chain_file(kwargs["chain_file"])
         if errors:
-            print(errors)
+            click.secho(errors, fg=ERROR_COLOR)
             exit(1)
 
         configuration = load_configuration(kwargs["config_file"], kwargs)
